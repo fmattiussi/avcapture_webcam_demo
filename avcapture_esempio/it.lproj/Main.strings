@@ -1,0 +1,30 @@
+
+/* Class = "NSMenuItem"; title = "avcapture_esempio"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "avcapture_esempio";
+
+/* Class = "NSTextFieldCell"; title = "Anteprima"; ObjectID = "4dZ-NN-eyJ"; */
+"4dZ-NN-eyJ.title" = "Anteprima";
+
+/* Class = "NSMenuItem"; title = "Quit avcapture_esempio"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Quit avcapture_esempio";
+
+/* Class = "NSMenuItem"; title = "About avcapture_esempio"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "About avcapture_esempio";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSWindow"; title = "AVCapture Demo"; ObjectID = "IQv-IB-iLA"; */
+"IQv-IB-iLA.title" = "AVCapture Demo";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Come vuoi chiamare il file?"; ObjectID = "O8Y-Pd-ujK"; */
+"O8Y-Pd-ujK.placeholderString" = "Come vuoi chiamare il file?";
+
+/* Class = "NSButtonCell"; title = "Salva"; ObjectID = "VZ6-F1-6bb"; */
+"VZ6-F1-6bb.title" = "Salva";
+
+/* Class = "NSButtonCell"; title = "Scatta!"; ObjectID = "Zxk-Xs-qgk"; */
+"Zxk-Xs-qgk.title" = "Scatta!";
+
+/* Class = "NSMenu"; title = "avcapture_esempio"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "avcapture_esempio";

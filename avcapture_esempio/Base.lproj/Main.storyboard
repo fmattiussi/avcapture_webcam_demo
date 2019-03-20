@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="avcapture_esempio" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="avcapture_esempio" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="About avcapture_esempio" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Quit avcapture_esempio" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="avcapture_esempio" customModuleProvider="target"/>
+                <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91" y="15"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="AVCapture Demo" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91" y="271"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="avcapture_esempio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="742" height="368"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="isN-5a-rnW">
+                                <rect key="frame" x="20" y="23" width="364" height="325"/>
+                            </customView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="guT-NN-ZVx">
+                                <rect key="frame" x="414" y="320" width="314" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="302" id="2yj-r6-Jv3"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Scatta!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zxk-Xs-qgk">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="scatta:" target="XfG-lQ-9wD" id="BqS-lS-g6L"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Q1-MY-gJD">
+                                <rect key="frame" x="420" y="274" width="302" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Come vuoi chiamare il file?" drawsBackground="YES" id="O8Y-Pd-ujK">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="B3p-AT-ame">
+                                <rect key="frame" x="414" y="238" width="314" height="32"/>
+                                <buttonCell key="cell" type="push" title="Salva" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VZ6-F1-6bb">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="salva:" target="XfG-lQ-9wD" id="fez-wM-6BL"/>
+                                </connections>
+                            </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MME-zs-don">
+                                <rect key="frame" x="420" y="23" width="302" height="164"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="164" id="zj0-Sj-NW5"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="5Kf-cq-aVE"/>
+                            </imageView>
+                            <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="C4J-nX-ggw">
+                                <rect key="frame" x="400" y="23" width="5" height="325"/>
+                            </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LZq-mG-o1i">
+                                <rect key="frame" x="411" y="195" width="67" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Anteprima" id="4dZ-NN-eyJ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="3Q1-MY-gJD" firstAttribute="trailing" secondItem="B3p-AT-ame" secondAttribute="trailing" id="0YU-Cc-dXo"/>
+                            <constraint firstItem="guT-NN-ZVx" firstAttribute="leading" secondItem="C4J-nX-ggw" secondAttribute="trailing" constant="17" id="1PQ-Qd-9ph"/>
+                            <constraint firstItem="B3p-AT-ame" firstAttribute="leading" secondItem="MME-zs-don" secondAttribute="leading" id="1fn-bF-1u8"/>
+                            <constraint firstItem="isN-5a-rnW" firstAttribute="top" secondItem="C4J-nX-ggw" secondAttribute="top" id="988-Qf-pka"/>
+                            <constraint firstItem="C4J-nX-ggw" firstAttribute="bottom" secondItem="MME-zs-don" secondAttribute="bottom" id="DJ4-6a-rfY"/>
+                            <constraint firstItem="isN-5a-rnW" firstAttribute="bottom" secondItem="C4J-nX-ggw" secondAttribute="bottom" id="Dgf-ih-cTf"/>
+                            <constraint firstItem="MME-zs-don" firstAttribute="top" secondItem="LZq-mG-o1i" secondAttribute="bottom" constant="8" symbolic="YES" id="I3K-d3-AA4"/>
+                            <constraint firstItem="LZq-mG-o1i" firstAttribute="leading" secondItem="C4J-nX-ggw" secondAttribute="trailing" constant="10" id="JTC-Rf-NUi"/>
+                            <constraint firstItem="B3p-AT-ame" firstAttribute="trailing" secondItem="MME-zs-don" secondAttribute="trailing" id="Poc-sF-9Ga"/>
+                            <constraint firstItem="isN-5a-rnW" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="Qy5-5m-9br"/>
+                            <constraint firstItem="3Q1-MY-gJD" firstAttribute="top" secondItem="guT-NN-ZVx" secondAttribute="bottom" constant="31" id="Xpb-70-BS2"/>
+                            <constraint firstItem="B3p-AT-ame" firstAttribute="top" secondItem="3Q1-MY-gJD" secondAttribute="bottom" constant="8" symbolic="YES" id="b0K-hK-o1U"/>
+                            <constraint firstItem="guT-NN-ZVx" firstAttribute="leading" secondItem="3Q1-MY-gJD" secondAttribute="leading" id="bbc-Iq-2MV"/>
+                            <constraint firstItem="C4J-nX-ggw" firstAttribute="leading" secondItem="isN-5a-rnW" secondAttribute="trailing" constant="18" id="fF7-2k-gju"/>
+                            <constraint firstItem="C4J-nX-ggw" firstAttribute="top" secondItem="guT-NN-ZVx" secondAttribute="top" id="gfE-hv-TXC"/>
+                            <constraint firstItem="LZq-mG-o1i" firstAttribute="top" secondItem="B3p-AT-ame" secondAttribute="bottom" constant="33" id="iMl-4t-H5b"/>
+                            <constraint firstItem="3Q1-MY-gJD" firstAttribute="leading" secondItem="B3p-AT-ame" secondAttribute="leading" id="oQ9-eV-4X0"/>
+                            <constraint firstItem="isN-5a-rnW" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="v5c-w8-uvs"/>
+                            <constraint firstItem="guT-NN-ZVx" firstAttribute="trailing" secondItem="3Q1-MY-gJD" secondAttribute="trailing" id="vJa-Dz-cPG"/>
+                            <constraint firstAttribute="trailing" secondItem="guT-NN-ZVx" secondAttribute="trailing" constant="20" symbolic="YES" id="vN7-6J-tm4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="anteprima_foto" destination="MME-zs-don" id="TBE-gX-e7v"/>
+                        <outlet property="textfield" destination="3Q1-MY-gJD" id="Mcw-Ls-34U"/>
+                        <outlet property="vista" destination="isN-5a-rnW" id="E2y-4Y-iD1"/>
+                    </connections>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91" y="804"/>
+        </scene>
+    </scenes>
+</document>
