@@ -11,7 +11,7 @@ Questa è una demo per l'uso della webcam integrata (iSight) dei Mac in un quals
 
 ## Screenshots
 
-
+![AVCapture Demo](https://github.com/fmattiussi/avcapture_webcam_demo/blob/master/Schermata%202019-03-20%20alle%2016.23.11.png)
 
 ## Crediti
 
